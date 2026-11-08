@@ -1,0 +1,51 @@
+{
+  "book": "三次转折（自撰示例）",
+  "chapter": "ch000",
+  "src": "examples/work/000.md",
+  "blocks": [
+    {"id": "p000", "status": "duplicate", "reason": "与章标题重复"},
+    {"id": "p001", "status": "covered", "reason": "进入 claim-001"},
+    {"id": "p002", "status": "duplicate", "reason": "节标题，正文已另设小标题"},
+    {"id": "p003", "status": "covered", "reason": "进入 claim-001、claim-002"},
+    {"id": "p004", "status": "covered", "reason": "进入 gap-003（排序依据未明说）"},
+    {"id": "p005", "status": "duplicate", "reason": "节标题"},
+    {"id": "p006", "status": "covered", "reason": "进入 claim-003、list-01"},
+    {"id": "p007", "status": "covered", "reason": "进入 claim-004、list-01"},
+    {"id": "p008", "status": "covered", "reason": "进入 claim-005、list-01"},
+    {"id": "p009", "status": "duplicate", "reason": "节标题"},
+    {"id": "p010", "status": "covered", "reason": "进入 claim-006"}
+  ],
+  "claims": [
+    {"id": "claim-001", "type": "原意", "text": "起点不是中立的，它预先分配了谁重要", "sources": ["p003"]},
+    {"id": "claim-002", "type": "事实", "text": "晚清小说家已用浅近文言写时事、用连载养读者", "sources": ["p003"]},
+    {"id": "claim-003", "type": "原意", "text": "第一次转折在读者：读者群体不具名，逼出章回体的节奏", "sources": ["p006"]},
+    {"id": "claim-004", "type": "原意", "text": "第二次转折在人物：中心由官转向知识分子与农民共享的性格", "sources": ["p007"]},
+    {"id": "claim-005", "type": "原意", "text": "第三次转折在叙述位置：第一人称改变读者与文本的契约", "sources": ["p008"]},
+    {"id": "claim-006", "type": "原意", "text": "作者自陈未答的问题：以人物为纲是否把结果当成了原因", "sources": ["p010"]},
+    {"id": "claim-007", "type": "推断", "text": "换年份与换人物是同一种操作：换起点即换中心", "sources": ["p003"], "note": "原文未明说这层类比"}
+  ],
+  "closedLists": [
+    {"id": "list-01", "label": "三次转折", "expected": 3, "found": 3, "sources": ["p006", "p007", "p008"]}
+  ],
+  "terms": [
+    {"term": "章回体", "def": "分回标目、以「话说」「且听下回分解」衔接的长篇体式",
+     "context": "作者用它指第一次转折在形式上留下的结果（p006）",
+     "related": ["第一人称限知"], "sources": ["p006"], "first": "p006"},
+    {"term": "第一人称限知", "def": "叙述者只知自己所感所想、不进入他人内心的叙述方式",
+     "context": "作者未用此名，本节按学界通名概括他在 p008 描述的现象",
+     "related": ["章回体"], "sources": ["p008"], "first": "p008"}
+  ],
+  "gaps": [
+    "原文称晚清小说家已用浅近文言写时事，未举作品与年份（p003）",
+    "「官消失二三十年」未给统计口径：按哪些作品、哪些年份计，原文未提供（p007）",
+    "三次转折的排序依据未明说，只说「我因此把三次转折重新排了顺序」（p004）"
+  ],
+  "review": {
+    "errorPass": [
+      {"id": "F-01", "finding": "初稿把起点年份写成一八九八年，原文为一九〇二年", "action": "改正为一八〇二年以外的原文值：一九〇二年（p003）"}
+    ],
+    "omissionPass": [
+      {"id": "M-01", "finding": "p004「我因此把三次转折重新排了顺序」初稿未登记，排序依据实为缺口", "action": "补入 gaps 第三条"}
+    ]
+  }
+}
